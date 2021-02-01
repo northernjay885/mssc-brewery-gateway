@@ -19,6 +19,8 @@ public class LocalHostRouteConfig {
                         .uri("http://localhost:8081"))
                 .route(r -> r.path("/api/v1/beer/*/inventory")
                         .uri("http://localhost:8082"))
+                .route(r -> r.path("/inventory-failover")
+                        .uri("http://localhost:8231"))
                 .build();
     }
 }
